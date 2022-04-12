@@ -3,7 +3,7 @@
 //  DailyRecord
 //
 //  Created by jimin on 2022/04/06.
-//. 22.04.12 깃 업로드
+//. 22.04.12 깃 업로드!!
 
 import UIKit
 import FSCalendar
