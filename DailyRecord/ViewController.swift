@@ -12,6 +12,9 @@ import RealmSwift
 
 
 class ViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate{
+    
+    // Realm 가져오기
+    let realm = try! Realm()
 
     @IBOutlet var calendar: FSCalendar!
     
@@ -52,8 +55,7 @@ class ViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate
         
         addGestureRecognizer()
         
-        // Realm 가져오기
-        let realm = try! Realm()
+
 
         // Realm 파일 위치
         print(Realm.Configuration.defaultConfiguration.fileURL!)
@@ -64,26 +66,55 @@ class ViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate
         dateSelected.month = "04"
         dateSelected.day = "07"
         
-        // Realm 에 저장하기
-        try! realm.write {
-            realm.add(dateSelected)
-            //안의 데이터 전부 삭제
-            realm.deleteAll()
-        }
-        
-        // Person 가져오기
-        let imageInfo = realm.objects(ImageInfo.self)
-        print(imageInfo)
+//        // Realm 에 저장하기
+//        try! realm.write {
+//            realm.add(dateSelected)
+//            //안의 데이터 전부 삭제
+//            realm.deleteAll()
+//        }
+//
+//        // Person 가져오기
+//        let imageInfo = realm.objects(ImageInfo.self)
+//        print(imageInfo)
 
-        
+          save()
 
         
         
     }
     
-    func saveImageInfo(){
+    func saveImageInfo(_ year:String,_ month:String,_ day:String) -> ImageInfo {
+        let imageinfo = ImageInfo()
+        imageinfo.year = year
+        imageinfo.month = month
+        imageinfo.day = day
         
+        return imageinfo
     }
+    
+    func save(){
+        let 빈지노 = self.saveImageInfo("Beenzino","34","남")
+         let 나플라 = self.saveImageInfo("Nafla", "29","남")
+           let 윤미래 = self.saveImageInfo("Tasha","40","여")
+         
+         try! realm.write{
+             realm.add(빈지노)
+             realm.add(나플라)
+             realm.add(윤미래)
+         }
+        print("저장되었습니다.")
+    }
+    
+    func deletedata(_ sender: Any) {
+        let userinfo = realm.objects(ImageInfo.self)
+            
+                      try! realm.write {
+                          realm.delete(userinfo)
+                      }
+               
+                  
+        }
+
     
     func enrollAlertEvent() {
             let photoLibraryAlertAction = UIAlertAction(title: "사진 앨범", style: .default) {
