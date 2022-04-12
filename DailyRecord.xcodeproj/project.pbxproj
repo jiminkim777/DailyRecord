@@ -123,7 +123,6 @@
 		ECD3A86227FDA1EB003A0526 = {
 			isa = PBXGroup;
 			children = (
-				ECD3A87F27FDA1EB003A0526 /* Info.plist */,
 				ECD3A86D27FDA1EB003A0526 /* DailyRecord */,
 				ECD3A86C27FDA1EB003A0526 /* Products */,
 				4C90AC2D49B9B5C1D9B42EA9 /* Pods */,
@@ -151,6 +150,7 @@
 				EC3BA20C28059B9500C66127 /* ViewModels */,
 				EC3BA20B28059B8600C66127 /* Models */,
 				ECD3A87727FDA1EB003A0526 /* DailyRecord.xcdatamodeld */,
+				ECD3A87F27FDA1EB003A0526 /* Info.plist */,
 			);
 			path = DailyRecord;
 			sourceTree = "<group>";
