@@ -10,6 +10,7 @@
 		8C1EBD8CA1E21F93C88B9D56 /* Pods_DailyRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79BB4F188C540C31A3978831 /* Pods_DailyRecord.framework */; };
 		EC2396E6280136F4004A3F24 /* cat2.png in Resources */ = {isa = PBXBuildFile; fileRef = EC2396E5280136F4004A3F24 /* cat2.png */; };
 		EC34FBD727FEE1440053C511 /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC34FBD627FEE1440053C511 /* cat.jpg */; };
+		EC3BA209280576A700C66127 /* ImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3BA208280576A700C66127 /* ImageInfo.swift */; };
 		ECD3A86F27FDA1EB003A0526 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD3A86E27FDA1EB003A0526 /* AppDelegate.swift */; };
 		ECD3A87127FDA1EB003A0526 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD3A87027FDA1EB003A0526 /* SceneDelegate.swift */; };
 		ECD3A87327FDA1EB003A0526 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD3A87227FDA1EB003A0526 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 		B1E27A0A7023126E941DC9CA /* Pods-DailyRecord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyRecord.release.xcconfig"; path = "Target Support Files/Pods-DailyRecord/Pods-DailyRecord.release.xcconfig"; sourceTree = "<group>"; };
 		EC2396E5280136F4004A3F24 /* cat2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cat2.png; path = ../../../Desktop/cat2.png; sourceTree = "<group>"; };
 		EC34FBD627FEE1440053C511 /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cat.jpg; path = ../../../Downloads/cat.jpg; sourceTree = "<group>"; };
+		EC3BA208280576A700C66127 /* ImageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInfo.swift; sourceTree = "<group>"; };
 		ECD3A86B27FDA1EB003A0526 /* DailyRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD3A86E27FDA1EB003A0526 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECD3A87027FDA1EB003A0526 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				ECD3A86E27FDA1EB003A0526 /* AppDelegate.swift */,
 				ECD3A87027FDA1EB003A0526 /* SceneDelegate.swift */,
 				ECD3A87227FDA1EB003A0526 /* ViewController.swift */,
+				EC3BA208280576A700C66127 /* ImageInfo.swift */,
 				ECD3A87427FDA1EB003A0526 /* Main.storyboard */,
 				ECD3A87A27FDA1EB003A0526 /* Assets.xcassets */,
 				ECD3A87C27FDA1EB003A0526 /* LaunchScreen.storyboard */,
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECD3A87327FDA1EB003A0526 /* ViewController.swift in Sources */,
+				EC3BA209280576A700C66127 /* ImageInfo.swift in Sources */,
 				ECD3A86F27FDA1EB003A0526 /* AppDelegate.swift in Sources */,
 				ECD3A87927FDA1EB003A0526 /* DailyRecord.xcdatamodeld in Sources */,
 				ECD3A87127FDA1EB003A0526 /* SceneDelegate.swift in Sources */,

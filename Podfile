@@ -8,4 +8,6 @@ target 'DailyRecord' do
   # Pods for DailyRecord
    pod 'FSCalendar'
 
+   pod 'RealmSwift', '~>10'
+
 end

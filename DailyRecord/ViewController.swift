@@ -8,10 +8,14 @@
 import UIKit
 import FSCalendar
 import Foundation
+import RealmSwift
+
 
 class ViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate{
 
     @IBOutlet var calendar: FSCalendar!
+    
+    
     
     @IBOutlet var imageView: UIImageView!
     let myImage: UIImage = UIImage(named: "cat.jpg")!
@@ -28,6 +32,7 @@ class ViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate
     private lazy var today: Date = { return Date() }()
 
     fileprivate let datesWithCat = ["20220407"]
+    
 
     
     override func viewDidLoad() {
@@ -47,6 +52,36 @@ class ViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate
         
         addGestureRecognizer()
         
+        // Realm 가져오기
+        let realm = try! Realm()
+
+        // Realm 파일 위치
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
+        // 데이터 타입 클래스를 선언하고, 저장할 year/month/day를 각각 지정합니다.
+        let dateSelected = ImageInfo()
+        dateSelected.year = "2022"
+        dateSelected.month = "04"
+        dateSelected.day = "07"
+        
+        // Realm 에 저장하기
+        try! realm.write {
+            realm.add(dateSelected)
+            //안의 데이터 전부 삭제
+            realm.deleteAll()
+        }
+        
+        // Person 가져오기
+        let imageInfo = realm.objects(ImageInfo.self)
+        print(imageInfo)
+
+        
+
+        
+        
+    }
+    
+    func saveImageInfo(){
         
     }
     
@@ -242,6 +277,9 @@ class ViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate
          let dateStr = imageDateFormatter.string(from: date)
          print("date : \(dateStr)")
          
+
+
+
          //myImage.resizeImgageTo(size: <#T##CGSize#>)
          let imageSize = CGSize(width: 50, height: 50)
          
@@ -249,6 +287,7 @@ class ViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate
          case imageDateFormatter.string(from: Date()):
              imageCheck = true
              print("imageCheck : \(imageCheck)")
+
              return UIImage(named: "cat2.png")?.resizeImgageTo(size: imageSize)
          case "20220411":
              return UIImage(named: "cat.jpg")?.resizeImgageTo(size: imageSize)
