@@ -27,6 +27,8 @@
 		EC2396E5280136F4004A3F24 /* cat2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cat2.png; path = ../../../Desktop/cat2.png; sourceTree = "<group>"; };
 		EC34FBD627FEE1440053C511 /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cat.jpg; path = ../../../Downloads/cat.jpg; sourceTree = "<group>"; };
 		EC3BA208280576A700C66127 /* ImageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInfo.swift; sourceTree = "<group>"; };
+		EC3BA21228059BFF00C66127 /* cat2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat2.png; sourceTree = "<group>"; };
+		EC3BA21328059C0100C66127 /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpg; sourceTree = "<group>"; };
 		ECD3A86B27FDA1EB003A0526 /* DailyRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD3A86E27FDA1EB003A0526 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECD3A87027FDA1EB003A0526 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,9 +69,61 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EC3BA20A28059B6100C66127 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ECD3A87227FDA1EB003A0526 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EC3BA20B28059B8600C66127 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC3BA208280576A700C66127 /* ImageInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EC3BA20C28059B9500C66127 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EC3BA20D28059BA900C66127 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ECD3A87C27FDA1EB003A0526 /* LaunchScreen.storyboard */,
+				ECD3A87427FDA1EB003A0526 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EC3BA21028059BE700C66127 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				ECD3A86E27FDA1EB003A0526 /* AppDelegate.swift */,
+				ECD3A87027FDA1EB003A0526 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		EC3BA21128059BF800C66127 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EC3BA21328059C0100C66127 /* cat.jpg */,
+				EC3BA21228059BFF00C66127 /* cat2.png */,
+				ECD3A87A27FDA1EB003A0526 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		ECD3A86227FDA1EB003A0526 = {
 			isa = PBXGroup;
 			children = (
+				ECD3A87F27FDA1EB003A0526 /* Info.plist */,
 				ECD3A86D27FDA1EB003A0526 /* DailyRecord */,
 				ECD3A86C27FDA1EB003A0526 /* Products */,
 				4C90AC2D49B9B5C1D9B42EA9 /* Pods */,
@@ -90,14 +144,12 @@
 			children = (
 				EC34FBD627FEE1440053C511 /* cat.jpg */,
 				EC2396E5280136F4004A3F24 /* cat2.png */,
-				ECD3A86E27FDA1EB003A0526 /* AppDelegate.swift */,
-				ECD3A87027FDA1EB003A0526 /* SceneDelegate.swift */,
-				ECD3A87227FDA1EB003A0526 /* ViewController.swift */,
-				EC3BA208280576A700C66127 /* ImageInfo.swift */,
-				ECD3A87427FDA1EB003A0526 /* Main.storyboard */,
-				ECD3A87A27FDA1EB003A0526 /* Assets.xcassets */,
-				ECD3A87C27FDA1EB003A0526 /* LaunchScreen.storyboard */,
-				ECD3A87F27FDA1EB003A0526 /* Info.plist */,
+				EC3BA21128059BF800C66127 /* Resources */,
+				EC3BA21028059BE700C66127 /* AppDelegate */,
+				EC3BA20D28059BA900C66127 /* Views */,
+				EC3BA20A28059B6100C66127 /* Controllers */,
+				EC3BA20C28059B9500C66127 /* ViewModels */,
+				EC3BA20B28059B8600C66127 /* Models */,
 				ECD3A87727FDA1EB003A0526 /* DailyRecord.xcdatamodeld */,
 			);
 			path = DailyRecord;

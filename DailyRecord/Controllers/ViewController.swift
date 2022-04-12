@@ -61,10 +61,12 @@ class ViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
         // 데이터 타입 클래스를 선언하고, 저장할 year/month/day를 각각 지정합니다.
-        let dateSelected = ImageInfo()
-        dateSelected.year = "2022"
-        dateSelected.month = "04"
-        dateSelected.day = "07"
+//        let dateSelected = ImageInfo()
+//        dateSelected.year = "2022"
+//        dateSelected.month = "04"
+//        dateSelected.day = "07"
+        
+
         
 //        // Realm 에 저장하기
 //        try! realm.write {
@@ -83,6 +85,27 @@ class ViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate
         
     }
     
+    func realmFileDelete(){
+        let realmURL = Realm.Configuration.defaultConfiguration.fileURL!
+                let realmURLs = [
+                    realmURL,
+                    realmURL.appendingPathExtension("lock"),
+                    realmURL.appendingPathExtension("note"),
+                    realmURL.appendingPathExtension("management")
+                ]
+                for URL in realmURLs {
+                    do {
+                        try FileManager.default.removeItem(at: URL)
+                    } catch {
+                        // handle error
+                    }
+                }
+
+
+        //출처: https://pipe0502.tistory.com/entry/Realm-Swift [SmartKuk 블로그]
+        
+    }
+    
     func saveImageInfo(_ year:String,_ month:String,_ day:String) -> ImageInfo {
         let imageinfo = ImageInfo()
         imageinfo.year = year
@@ -93,10 +116,10 @@ class ViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate
     }
     
     func save(){
-        let 빈지노 = self.saveImageInfo("Beenzino","34","남")
-         let 나플라 = self.saveImageInfo("Nafla", "29","남")
-           let 윤미래 = self.saveImageInfo("Tasha","40","여")
-         
+        let 빈지노 = self.saveImageInfo("20220414","34","남")
+         let 나플라 = self.saveImageInfo("20220415", "29","남")
+           let 윤미래 = self.saveImageInfo("20220416","40","여")
+
          try! realm.write{
              realm.add(빈지노)
              realm.add(나플라)
